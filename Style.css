@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Righteous&family=Sarala:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* Corpo Landing Page completa*/
+body{
+    
+    font-size: 100;
+}
+/* Estilização geral do cabeçalho */
+.Cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 12px;
+    background: fixed;
+    background-color: rgb(211, 130, 73);
+}
+/*Estilização geral do Menu*/
+.Menu{
+    display: flex;
+    gap: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color:black;
+    font-weight: 400;
+    font-size: 24px;
+}
+/*Estilização geral da primeira sessão da Landing Page*/
+.S1{
+    background-image: url("interior-do-restaurante.jpg");
+    background-size: 1375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 10px solid burlywood;
+    border-right: 10px solid burlywood;
+    border-bottom: 5px solid burlywood;
+    border-top: 5px solid burlywood;
+}
+/*Estilização do primeiro texto da primeira sessão*/
+.Sec1-Tex1{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    font-size: 25pt;
+    padding-top: 15px;
+    color: bisque; 
+    text-shadow: black 0.4em 0.4em 0.6em;
+    font-family: 'Playfair Display', serif;
+
+}
+/* Estilização do segundo texto da primeira sessão */
+.Sec1-Tex2{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    font-size: 25pt;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: bisque; 
+    text-shadow: black 0.4em 0.4em 0.6em;
+    font-family: 'Playfair Display', serif;
+}
+/*Estilização do Botão de Reservas*/
+.Botao{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    font-size: 25pt;
+    width: 150px;
+    height: 50px;
+    background-color: bisque;
+    border-radius: 20px;
+    font-family: 'Playfair Display', cursive;
+    
+}
+/*Div invisível*/
+.Sec1-Tex3{
+    display: flex;
+    padding-top: 25px;
+}
+/*Características gerais da sessão 2*/
+.S2{
+    display: flex;
+    background-image:linear-gradient(to left, chocolate, burlywood);
+    flex-direction: row;
+    background-size: 1375px;
+    border-left: 10px solid burlywood;
+    border-right: 10px solid burlywood;
+    border-bottom: 5px solid burlywood;
+    border-top: 5px solid burlywood;
+    justify-content: space-evenly;   
+}
+/*Características da foto da 2° sessão*/
+.foto1{
+    width: 320px;
+    height: 250px;
+    display: flex;
+    opacity: 85%;
+}
+/*Título da segunda sessão*/
+.Sec2-Tex1{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+/*Texto da segunda sessão*/
+.Sec2-Tex2{
+    font-size: 18px;
+    font-family: 'Righteous', cursive;
+    width: 300px;
+    padding-top: 5px;
+}
+/*Características gerais da 3° sessão*/
+.S3{
+    display: flex;
+    background-image:linear-gradient(to right, chocolate, burlywood);
+    flex-direction: row-reverse;
+    background-size: 1375px;
+    border-left: 10px solid burlywood;
+    border-right: 10px solid burlywood;
+    border-bottom: 5px solid burlywood;
+    border-top: 5px solid burlywood;
+    justify-content: space-evenly;
+}
+/*Características da foto da 3° sessão*/
+.foto2{
+    width: 320px;
+    height: 250px;
+    display: flex;
+    opacity: 85%;
+}
+/*Título da 3° sessão*/
+.Sec3-Tex1{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+/*TTexto da 3° sessão*/
+.Sec3-Tex2{
+    font-size: 18px;
+    font-family: 'Righteous', cursive;
+    width: 300px;
+    padding-top: 5px;
+}
+/*Características gerais da 4° sessão*/
+.S4{
+    display: flex;
+    background-image:linear-gradient(to left, chocolate, burlywood);
+    flex-direction: row;
+    background-size: 1375px;
+    border-left: 10px solid burlywood;
+    border-right: 10px solid burlywood;
+    border-bottom: 5px solid burlywood;
+    border-top: 10px solid  burlywood;
+    justify-content: space-evenly;
+   
+}
+/*Características das fotos da 4° sessão*/
+.foto3{
+    width: 320px;
+    height: 250px;
+    display: flex;
+    opacity: 85%;
+}
+/*Título da 4° sessão*/
+.Sec4-Tex1{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+/*Texto da 4° sessão*/
+.Sec4-Tex2{
+   font-size: 18px;
+   font-family: 'Righteous', cursive;
+   width: 300px;
+   padding-top: 5px;
+}
+/*Características gerais da 5° sessão*/
+.S5{
+    display: flex;
+    background-image:linear-gradient(to right, chocolate, burlywood);
+    flex-direction: row-reverse;
+    background-size: 1375px;
+    border-left: 10px solid burlywood;
+    border-right: 10px solid burlywood;
+    border-bottom: 5px solid burlywood;
+    border-top: 10px solid burlywood;
+    justify-content: space-evenly;
+}
+/*Características da foto da 5° sessão*/
+.foto4{
+    width: 320px;
+    height: 250px;
+    display: flex;
+    opacity: 85%;
+}
+/*Título da 5° sessão*/
+.Sec5-Tex1{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+/*Texto da 5° sessão*/
+.Sec5-Tex2{
+    font-size: 18px;
+    font-family: 'Righteous', cursive;
+    width: 300px;
+    padding-top: 5px;
+}
