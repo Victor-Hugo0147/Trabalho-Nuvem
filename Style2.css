@@ -1,6 +1,5 @@
 body{
-    background-image:linear-gradient(to right, chocolate, 
-                                     burlywood);
+    background-image:linear-gradient(to right, chocolate, burlywood);
 }
 #reservation-form{
     background-color: bisque;
