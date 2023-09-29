@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+<link rel="stylesheet" href="Style2.css">
+</head>
+
+<body>
+   
+    <section class = S1 >
+       
+    <!-- Formulário para adicionar uma nova reserva -->
+    <form id="reservation-form">
+        <h1>Reservas</h1>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required>
+        <label for="date">Data:</label>
+        <input type="date" id="date" required>
+        <button type="submit">Reservar</button>
+    </form>
+
+    <!-- Lista de reservas -->
+    <ul id="reservation-list">
+        <!-- As reservas serão listadas aqui -->
+    </ul>
+</section>
+    <script>
+        // Array para armazenar as reservas (simulando um banco de dados)
+        const reservations = [];
+
+        // Elementos do DOM
+        const reservationForm = document.getElementById('reservation-form');
+        const reservationList = document.getElementById('reservation-list');
+
+        // Função para renderizar a lista de reservas
+        function renderReservationList() {
+            // Limpa a lista antes de renderizar novamente
+            reservationList.innerHTML = '';
+
+            // Loop pelas reservas e cria elementos de lista para cada uma
+            for (let i = 0; i < reservations.length; i++) {
+                const reservation = reservations[i];
+
+                // Elemento de lista
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    Nome: ${reservation.name} - Data: ${reservation.date}
+                    <button onclick="editReservation(${i})">Editar</button>
+                    <button onclick="deleteReservation(${i})">Excluir</button>
+                `;
+
+                // Adiciona o elemento de lista à lista
+                reservationList.appendChild(li);
+            }
+        }
+
+        // Função para adicionar uma nova reserva
+        function addReservation(name, date) {
+            const reservation = { name, date };
+            reservations.push(reservation);
+            renderReservationList();
+        }
+
+        // Função para editar uma reserva
+        function editReservation(index) {
+            const updatedName = prompt('Editar o nome da reserva:', reservations[index].name);
+            if (updatedName !== null) {
+                const updatedDate = prompt('Editar a data da reserva:', reservations[index].date);
+                if (updatedDate !== null) {
+                    reservations[index].name = updatedName;
+                    reservations[index].date = updatedDate;
+                    renderReservationList();
+                }
+            }
+        }
+
+        // Função para excluir uma reserva
+        function deleteReservation(index) {
+            const confirmDelete = confirm('Tem certeza de que deseja excluir esta reserva?');
+            if (confirmDelete) {
+                reservations.splice(index, 1);
+                renderReservationList();
+            }
+        }
+
+        // Manipular o envio do formulário para adicionar uma nova reserva
+        reservationForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('name');
+            const dateInput = document.getElementById('date');
+            const name = nameInput.value.trim();
+            const date = dateInput.value;
+
+            if (name !== '' && date !== '') {
+                addReservation(name, date);
+                nameInput.value = '';
+                dateInput.value = '';
+            }
+        });
+
+        // Renderizar a lista inicial
+        renderReservationList();
+    </script>
+</body>
+</html>
